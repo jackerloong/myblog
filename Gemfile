@@ -4,7 +4,10 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.4'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+#----- 修改完成后， bundle install 安装扩展。----#
+#----- 要改成 0.3.*版本， 否则rake db:migrate时会提示没有 mysql2
+#----- 然后进入mysql，创建config/databse.yml设置的数据库，否则migrate时，提示具体数据库不存在。
+gem 'mysql2', '~> 0.3.18'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
