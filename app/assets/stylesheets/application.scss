@@ -13,5 +13,15 @@
  *= require_tree .
  *= require_self
  */
- @import "bootstrap-sprockets";
- @import "bootstrap";
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+/*-- 解决被导航遮住问题 */
+body {
+  padding-top: 50px;
+}
+.starter-template {
+  padding: 40px 15px;
+  text-align: center;
+}
