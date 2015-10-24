@@ -6,7 +6,6 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -40,6 +39,10 @@
       </div>
     </nav>
 
+    <% if flash.notice %>
+      <div class="notice"><%= flash.notice %></div>
+    <% end %>
+
     <div class="container">
 
       <%= yield %>
@@ -54,6 +57,13 @@
 	  </div>
 	</footer>
 
-  	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <script>
+    <!-- $('.home-banner').anystretch();  搞不定-->
+    var hideNotice = function(){
+     $(".notice").fadeOut("slow");
+    }
+    setTimeout(hideNotice, 4000);
+  </script>
 </body>
 </html>
