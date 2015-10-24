@@ -9,6 +9,9 @@ gem 'rails', '4.2.4'
 #----- 然后进入mysql，创建config/databse.yml设置的数据库，否则migrate时，提示具体数据库不存在。
 gem 'mysql2', '~> 0.3.18'
 # Use SCSS for stylesheets
+
+#---- for postgresql
+gem 'pg'
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -29,6 +32,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 #---- Bootstrap
 gem 'bootstrap-sass', '~> 3.2.0.2'
 
+gem 'bcrypt', '~> 3.1.7'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
