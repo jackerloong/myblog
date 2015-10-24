@@ -1,6 +1,8 @@
 class User < ActiveRecord::Base
   has_secure_password
   before_create { generate_token(:auth_token) }
+  validates :name, :email, presence: true
+  validates :name, :email, uniqueness: {case_sensitive: false} # 忽略大小写
 
   def generate_token(column)
     begin

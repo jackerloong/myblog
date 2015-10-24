@@ -4,10 +4,13 @@ class UsersController < ApplicationController
   end
 
   def create
-    user = User.new(user_params)
-    user.save
-    cookies[:auth_token] = user.auth_token
-    redirect_to :root
+    @user = User.new(user_params)
+    if @user.save
+      cookies[:auth_token] = user.auth_token
+      redirect_to :root
+    else
+      render :signup  #---必须使用实例变量,才能渲染到 signup.html视图
+    end
   end
 
   def create_login_session
