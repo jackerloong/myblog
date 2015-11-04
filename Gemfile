@@ -10,6 +10,9 @@ gem 'rails', '4.2.4'
 gem 'mysql2', '~> 0.3.18'
 # Use SCSS for stylesheets
 
+# ---- for markdown
+gem 'redcarpet'
+gem 'coderay'
 #---- for postgresql
 gem 'pg'
 gem 'sass-rails', '~> 5.0'

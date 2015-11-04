@@ -1,0 +1,14 @@
+<h3>文章列表</h3>
+<% @articles.each do |article| %>
+	<div class="well well-lg">
+		<h4> <%= link_to article.title, article %> </h4>
+
+		<span class="glyphicon glyphicon-time"> </span>
+		<%= article.updated_at.to_s.split[0] %>     &nbsp;&nbsp;&nbsp;&nbsp;
+
+		<span class="glyphicon glyphicon-eye-open"></span> 1&nbsp;&nbsp;&nbsp;&nbsp;
+		<span class="glyphicon glyphicon-thumbs-up"></span> 2&nbsp;&nbsp;&nbsp;&nbsp;
+		<span class="glyphicon glyphicon-comment"></span> 3
+		<%= marksub article.text %>
+	</div>
+<% end %>
