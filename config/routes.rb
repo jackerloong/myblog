@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'categories/show'
+
   get 'users/signup'
 
   get 'welcome/index'
@@ -17,6 +19,7 @@ Rails.application.routes.draw do
    resources :users, only: [:create]
 
    resources :articles
+   resources :categories, only: [:show]
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

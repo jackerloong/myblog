@@ -1,4 +1,10 @@
+<h3 align="center"> <%= @article.title %> </h3>
+<%= markdown @article.text %>
 
-<h4 align="center"> <%= @article.title %> </h4>
 
-<%= raw markdown(@article.text) %>
+<% content_for :sidebar do %>
+	<%= render partial: "shared/sidebar" %>
+<% end %>
+
+
+
