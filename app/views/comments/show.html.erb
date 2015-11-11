@@ -1,0 +1,6 @@
+<p>
+  <strong style="color:blue">
+  <%= User.find_by_id(@comment.user_id).try(:name) %>
+  </strong>:
+  <%= @comment.body %>
+</p>

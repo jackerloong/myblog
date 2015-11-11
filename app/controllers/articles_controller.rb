@@ -15,6 +15,6 @@ class ArticlesController < ApplicationController
 		@posts = Article.all
 	  	if @posts.length > 10
 	  		@posts = @posts[1..10]
-	  	end 
+	  	end
 	end
 end

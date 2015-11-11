@@ -1,0 +1,19 @@
+<hr/>
+<h4> 评论列表 </h4>
+
+<%= render @article.comments %>
+
+<hr/>
+<h4> 添加评论 </h4>
+<% if current_user %>
+  <%= form_for([@article, @article.comments.build]) do |f| %>
+    <p>
+      <%= f.text_area :body %>
+    </p>
+    <p>
+      <%= f.submit %>
+    </p>
+  <% end %>
+<% else %>
+  <p style="color:red"> 发表评论需要登录。 点击<%= link_to "登录", login_path %></p>
+<% end %>
